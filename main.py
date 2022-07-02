@@ -10,9 +10,9 @@ def get_beer():
 
     initial_gravity = request.args.get('initial_gravity')
     final_gravity = request.args.get('final_gravity')
-    color = request.args.get('color')
-    alcohol_graduation = request.args.get('alcohol_graduation')
-    bitterness = request.args.get('bitterness')
+    color = int(request.args.get('color'))
+    alcohol_graduation = float(request.args.get('alcohol_graduation'))
+    bitterness = int(request.args.get('bitterness'))
 
     print(f"""
     Params

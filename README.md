@@ -2,4 +2,12 @@
 
 ## Instalar dependencias
 
-`pip3 install -r requirements.txt`
+`make install`
+
+## Correr aplicación
+
+`make app`
+
+## Correr frontend
+
+`make front`

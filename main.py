@@ -1,9 +1,9 @@
 from experta import *
+from facts import *
 from beer_decider import BeerDecider
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
-
 
 @app.route("/beer")
 def get_beer():
@@ -25,7 +25,7 @@ def get_beer():
 
     engine = BeerDecider()
     engine.reset()
-    info_beer = Fact(
+    info_beer = BeerInfo(
         initial_gravity=initial_gravity,
         final_gravity=final_gravity,
         color=color,

@@ -14,14 +14,17 @@ export default function CategoricInput({options, title, tooltip, value, handleVa
 
   return (
     <>
-      <Grid className={classes.firstSliderGrid} item xs={titleSize}>
-        <h4 className={classes.titles}>{title}
+      <Grid className={classes.firstSliderGrid} item xs={titleSize} style={{paddingTop: '18px'}}>
+        <Grid container className={classes.titles}>
+            <div style={{marginTop: '3px'}}>
+                {title}
+            </div>
           <Tooltip className={classes.tooltips} placement="right" title={<span className={classes.tooltipsText}>{tooltip}</span>}>
             <HelpIcon color="action" fontSize="small"></HelpIcon>
           </Tooltip>
-        </h4>
+        </Grid>
       </Grid>
-      <Grid className={classes.firstSliderGrid} item xs={sliderSize}>
+      <Grid className={classes.firstSliderGrid} item xs={sliderSize}  style={{paddingTop: '18px', paddingBottom: '18px'}}>
       <Select
           labelId="demo-simple-select-helper-label"
           id="demo-simple-select-helper"

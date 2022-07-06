@@ -14,6 +14,7 @@ const useStyles = makeStyles({
   },
   gridContainer: {
     alignItems: 'center',
+    padding: '60px'
   },
   gridProgress: {
     textAlign: 'center',

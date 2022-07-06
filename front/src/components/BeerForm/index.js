@@ -44,7 +44,7 @@ export default function SimulateRulesForm({getBeerInfo}) {
                 sx={{
                     marginLeft: 10,
                     marginRight: 10,
-                    padding: '5px 0 30px 34px',
+                    padding: '12px 0 50px 34px',
                     background: 'transparent',
                     border: '3px solid #D3A10D',
                     borderRadius: 3,
@@ -71,6 +71,7 @@ export default function SimulateRulesForm({getBeerInfo}) {
                     />
 
                     <InputSlider
+                        first={true}
                         max={45}
                         title={"Color"}
                         tooltip={"Rango de color que tiene la cerveza (SRM)"}

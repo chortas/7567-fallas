@@ -11,7 +11,8 @@ export default function InputSlider({
                                         handleValueChange,
                                         step = 1,
                                         titleSize = 6,
-                                        sliderSize = 6
+                                        sliderSize = 6,
+                                        first = false
                                     }) {
     const classes = useStyles();
 
@@ -28,7 +29,7 @@ export default function InputSlider({
 
     return (
         <>
-            <Grid className={classes.firstSliderGrid} item xs={titleSize} style={{paddingTop: '18px'}}>
+            <Grid className={classes.firstSliderGrid} item xs={titleSize} style={{paddingTop: first ? '30px' : '18px'}}>
                 <Grid container className={classes.titles}>
                     <div style={{marginTop: '3px'}}>
                         {title}
@@ -39,7 +40,7 @@ export default function InputSlider({
                     </Tooltip>
                 </Grid>
             </Grid>
-            <Grid className={classes.firstSliderGrid} item xs={sliderSize} style={{paddingTop: '18px'}}>
+            <Grid className={classes.firstSliderGrid} item xs={sliderSize} style={{paddingTop: first ? '30px' : '18px'}}>
                 <Slider
                     size="small"
                     value={value}
